@@ -38,7 +38,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.altamiracorp.miniweb</groupId>
+            <groupId>com.github.SamuraiCats</groupId>
             <artifactId>miniweb</artifactId>
             <version>${miniweb.version}</version>
         </dependency>
@@ -84,19 +84,4 @@
             <version>${jetty.version}</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>lumify-releases</id>
-            <url>http://bits.lumify.io/m2/releases/</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <id>lumify-snapshots</id>
-            <url>http://bits.lumify.io/m2/snapshots/</url>
-        </repository>
-    </repositories>
 </project>

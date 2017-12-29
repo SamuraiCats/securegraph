@@ -1,7 +1,7 @@
 package org.securegraph.examples;
 
-import com.altamiracorp.miniweb.App;
-import com.altamiracorp.miniweb.HandlerChain;
+import io.lumify.miniweb.App;
+import io.lumify.miniweb.HandlerChain;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.securegraph.Authorizations;

@@ -47,12 +47,12 @@
         </developer>
     </developers>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>bits.lumify.io.snapshots</id>
-            <url>https://bits.lumify.io/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <properties>
         <java.compiler.showWarnings>true</java.compiler.showWarnings>
@@ -85,7 +85,7 @@
         <hadoop.version>2.3.0</hadoop.version>
 
         <!-- used by: examples-base -->
-        <miniweb.version>0.3.0</miniweb.version>
+        <miniweb.version>v0.5.1</miniweb.version>
         <jetty.version>9.2.5.v20141112</jetty.version>
     </properties>
 

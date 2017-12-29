@@ -1,8 +1,8 @@
 package org.securegraph.examples;
 
-import com.altamiracorp.miniweb.App;
-import com.altamiracorp.miniweb.StaticFileHandler;
-import com.altamiracorp.miniweb.StaticResourceHandler;
+import io.lumify.miniweb.App;
+import io.lumify.miniweb.handlers.StaticFileHandler;
+import io.lumify.miniweb.handlers.StaticResourceHandler;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -20,13 +20,13 @@ public abstract class RouterBase extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
-        app = new App(config);
+        app = new App(config.getServletContext());
 
         initApp(config, app);
     }
 
     protected void initApp(ServletConfig config, App app) {
-        app.get("/", new StaticFileHandler(config, "/index.html"));
+        app.get("/", new StaticFileHandler(config.getServletContext(), "/index.html"));
         app.get("/jquery.js", new StaticResourceHandler(RouterBase.class, "/org/securegraph/examples/jquery.js", "text/javascript"));
     }
 
